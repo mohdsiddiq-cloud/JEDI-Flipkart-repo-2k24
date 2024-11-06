@@ -2,7 +2,6 @@ package com.flipfit.business;
 
 import com.flipfit.bean.*;
 import com.flipfit.business.interfaces.IFlipFitGymOwner;
-import com.flipfit.exceptions.InvalidChoiceException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,8 +22,13 @@ public class FlipFitGymOwnerBusiness implements IFlipFitGymOwner {
         return new ArrayList<>();
     }
 
+    @Override
+    public List<FlipFitUser> viewFlipFitCustomers(FlipFitGymCentre flipFitGymCentre) {
+        return null;
+    }
 
-    public FlipFitGymOwner editDetails(FlipFitGymOwner owner) throws InvalidChoiceException {
+
+    public FlipFitGymOwner editDetails(FlipFitGymOwner owner){
         return owner;
     }
     public FlipFitGymOwner registerOwner(FlipFitGymOwner GymOwner) {

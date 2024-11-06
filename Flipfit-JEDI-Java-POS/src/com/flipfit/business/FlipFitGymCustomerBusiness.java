@@ -1,11 +1,9 @@
 package com.flipfit.business;
-import com.flipfit.dao.*;
 import com.flipfit.bean.*;
 import com.flipfit.business.interfaces.IFlipFitGymCustomer;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.flipfit.exceptions.InvalidChoiceException;
 
 public class FlipFitGymCustomerBusiness implements IFlipFitGymCustomer {
 
