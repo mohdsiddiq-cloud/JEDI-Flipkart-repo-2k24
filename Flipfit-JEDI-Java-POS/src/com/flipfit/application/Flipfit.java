@@ -30,12 +30,12 @@ public class Flipfit {
                         String username = in.next();
                         System.out.print("Enter your password:> ");
                         String password = in.next();
-                        System.out.print("Enter your role:> Customer/Admin/GymOwner ");
+                        System.out.print("Enter your role:> GymCustomer/GymAdmin/GymOwner ");
                         String role = in.next();
 //                        System.out.println("Login Successful");
 
                         switch (role) {
-                            case "Customer": {
+                            case "GymCustomer": {
                                 // customer menu
                                 FlipFitUser gymCustomer = new FlipFitUser();
                                 gymCustomer.setEmailID(username);
@@ -44,7 +44,7 @@ public class Flipfit {
                                 GymFlipFitCustomerMenu.getFlipFitCustomerMenu(gymCustomer);
                                 break;
                             }
-                            case "Admin": {
+                            case "GymAdmin": {
                                 // admin menu
                                 FlipFitAdmin admin= new FlipFitAdmin();
                                 admin.setEmailID(username);
@@ -126,7 +126,6 @@ public class Flipfit {
                         String gstNum = in.next();
                         System.out.println("Enter your aadharNumber: ");
                         String aadharNumber = in.next();
-
 
 
                         FlipFitGymOwner flipFitOwner = new FlipFitGymOwner();

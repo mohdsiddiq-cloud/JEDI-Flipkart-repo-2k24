@@ -9,12 +9,15 @@ public class GymFlipFitOwnerMenu {
             Scanner sc = new Scanner(System.in);
             int choice = 0;
             do {
-                System.out.println("Gym Owner Menu (1 to 4) ");
+                System.out.println("Gym Owner Menu (1 to 7) ");
                 System.out.println("Choose an option:" +
                         "\n 1. Add Centre" +
                         "\n 2. View Centres" +
-                        "\n 3. Logout" +
-                        "\n 4. Exit"
+                        "\n 3. Update slots"+
+                        "\n 4. View Booking Details"+
+                        "\n 5. Update Profile"+
+                        "\n 6. Logout" +
+                        "\n 7. Exit"
                 );
                 choice = sc.nextInt();
                 switch (choice) {
@@ -40,10 +43,25 @@ public class GymFlipFitOwnerMenu {
                         break;
                     }
                     case 3: {
+                        System.out.println("Update Slots");
+
+                        break;
+                    }
+                    case 4: {
+                        System.out.println("Booking Details");
+
+                        break;
+                    }
+                    case 5: {
+                        System.out.println("Update Profile");
+
+                        break;
+                    }
+                    case 6: {
                         System.out.println("Successful logout");
                         break;
                     }
-                    case 4:{
+                    case 7:{
                         System.out.println("Exit");
                         break;
                     }
@@ -52,6 +70,6 @@ public class GymFlipFitOwnerMenu {
                     }
                 }
             }
-            while (choice != 4);
+            while (choice != 7);
         }
 }
