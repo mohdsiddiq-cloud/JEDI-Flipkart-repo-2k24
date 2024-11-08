@@ -1,14 +1,11 @@
 package com.flipfit.dao;
 
-import com.flipfit.bean.FlipFitBooking;
-import com.flipfit.bean.FlipFitGymCentre;
-import com.flipfit.bean.FlipFitGymOwner;
+import com.flipfit.bean.*;
 import com.flipfit.dao.interfaces.IFlipFitGymOwnerDAO;
 import java.util.Random;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-import com.flipfit.bean.FlipFitUser;
 
 public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
     Random rand = new Random();
@@ -94,17 +91,21 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
     @Override
     public FlipFitGymOwner editDetails(FlipFitGymOwner owner) {
         int userId = owner.getUserId();
-        String sql = "UPDATE flipfit_gym_owner_pi SET pan_id=?, adhaar_number=? ,gst_number=? WHERE user_id=?";
+        String sql = "UPDATE flipfit_gym_owner_pi SET pan_id=?, adhaar_number=? ,gst_number=? WHERE owner_id=?";
 
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)){
             stmt.setString(1, owner.getPanId());
             stmt.setString(2, owner.getAadharNumber());
             stmt.setString(3,owner.getGSTNum());
             stmt.setInt(4, userId);
-            try(ResultSet rs = stmt.executeQuery()) {
-                if(rs.next()) {
+            try{
+                int count= stmt.executeUpdate();
+                if(count>0) {
                     return owner;
                 }
+            }
+            catch (Exception e){
+                e.printStackTrace();
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -113,15 +114,19 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
         return null;
     }
 
+
+
     @Override
-    public FlipFitUser addUser(FlipFitUser user) {
-        String sql = "INSERT INTO user (user_id, role, email, phone, password) VALUES (?, ?, ?, ?, ?)";
+    public FlipFitGymOwner addGymOwner(FlipFitGymOwner owner) {
+
+
+        String sql = "INSERT INTO user (user_name, role, email, phone, password) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
-            stmt.setString(1, user.getUserName());
-            stmt.setInt(2, user.getRoleID());
-            stmt.setString(3, user.getEmailID());
-            stmt.setString(4, user.getPhoneNumber());
-            stmt.setString(5, user.getPassword());
+            stmt.setString(1, owner.getUserName());
+            stmt.setInt(2, owner.getRole());
+            stmt.setString(3, owner.getEmailID());
+            stmt.setString(4, owner.getPhoneNumber());
+            stmt.setString(5, owner.getPassword());
             int affectedRows = stmt.executeUpdate(); // Use executeUpdate() for INSERT
             if (affectedRows == 0) {
                 throw new SQLException("Creating user failed, no rows affected.");
@@ -130,27 +135,25 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
             try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
                 if (generatedKeys.next()) {
                     int userID = generatedKeys.getInt(1);
-                    user.setUserID(userID);
+                    owner.setUserId(userID);
+
                 } else {
                     throw new SQLException("Creating user failed, no ID obtained.");
+
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
+            return owner;
         }
-        return user;
-    }
 
-
-    @Override
-    public FlipFitGymOwner addGymOwner(FlipFitGymOwner owner, FlipFitUser user) {
-        String sql = "INSERT INTO flipfit_gym_owner_pi (user_id ,pan_id, adhaar_number, gst_number, is_approved_by_admin) VALUES (?, ?, ?, ?, ?)";
+        sql = "INSERT INTO flipfit_gym_owner_pi (owner_id ,pan_id, adhaar_number, gst_number, is_approved_by_admin) VALUES (?, ?, ?, ?, ?)";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, user.getUserID());
+            stmt.setInt(1, owner.getUserId());
             stmt.setString(2, owner.getPanId());
             stmt.setString(3, owner.getAadharNumber());
             stmt.setString(4, owner.getGSTNum());
-            stmt.setBoolean(5, false);
+            stmt.setBoolean(5, owner.getIsApproved());
             int affectedRows = stmt.executeUpdate(); // Use executeUpdate() for INSERT
             if (affectedRows == 0) {
                 throw new SQLException("Creating owner failed, no rows affected.");
@@ -158,8 +161,56 @@ public class FlipFitGymOwnerDAOImpl implements IFlipFitGymOwnerDAO {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        owner.setUserId(user.getUserID());
+
         return owner;
+    }
+
+
+
+
+    public static void main(String[] args) {
+//        FlipFitUser user = new FlipFitUser();
+//        user.setEmailID("dee@gmail.com");
+////        user.setUserID(1);
+//        user.setPassword("123@123");
+//        user.setPhoneNumber("1234567890");
+//        user.setUserName("DEEP");
+//        user.setRoleID(3);
+
+        FlipFitGymOwner owner = new FlipFitGymOwner();
+        owner.setCity("xyz");
+        owner.setPinCode("123");
+        owner.setUserName("Sidque");
+        owner.setPassword("xyz");
+        owner.setEmailID("xyz@gmail.commingw");
+        owner.setPhoneNumber("1234255");
+        owner.setRole(2);
+        owner.setAadharNumber("123454");
+        owner.setPanId("DKJDHD");
+        owner.setGSTIN("GST123362");
+        owner.setIsApproved(false);
+        owner.setUserId(4);
+
+        System.out.println(owner.getUserName());
+
+//        addUser(user);
+        FlipFitGymOwner own= new FlipFitGymOwnerDAOImpl().editDetails(owner);
+
+        System.out.println(owner.getUserId());
+
+//
+//        FlipFitGymCentre center = new FlipFitGymCentre();
+//
+//        center.setOwnerID(owner.getUserId());
+//        center.setCapacity(5);
+//        center.setCity("HYDD");
+//        center.setState("TGS");
+//        center.setPincode("5063212");
+//        center.setApproved(false);
+//
+//        new FlipFitGymOwnerDAOImpl().addCentre(center);
+
+
     }
 
 }

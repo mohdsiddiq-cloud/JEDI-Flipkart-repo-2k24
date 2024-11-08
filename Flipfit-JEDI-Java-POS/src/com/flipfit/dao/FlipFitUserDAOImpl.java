@@ -40,7 +40,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
 
     @Override
     public FlipFitUser loginAsCustomer(String emailID, String password) {
-        String sql = "SELECT * from user where email=? and password=? and role=3";
+        String sql = "SELECT * from User where emailID=? and password=? and roleID=1";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, emailID);
             stmt.setString(2, password);
@@ -50,9 +50,9 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
                     FlipFitUser flipFitUser = new FlipFitUser();
                     flipFitUser.setEmailID(emailID);
                     flipFitUser.setPassword(password);
-                    flipFitUser.setUserID(rs.getInt("user_id"));
-                    flipFitUser.setRoleID(rs.getInt("role"));
-                    flipFitUser.setUserName(rs.getString("user_name"));
+                    flipFitUser.setUserID(rs.getInt("userID"));
+                    flipFitUser.setRoleID(rs.getInt("roleID"));
+                    flipFitUser.setUserName(rs.getString("userName"));
                     return flipFitUser;
                 }
             }
@@ -64,7 +64,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
 
     @Override
     public FlipFitUser loginAsOwner(String emailID, String password) {
-        String sql = "SELECT * from user where email=? and password=? and role=2";
+        String sql = "SELECT * from User where emailID=? and password=? and roleID=2";
         try (Connection conn = GetConnection.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, emailID);
             stmt.setString(2, password);
@@ -74,9 +74,9 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
                     FlipFitUser flipFitUser = new FlipFitUser();
                     flipFitUser.setEmailID(emailID);
                     flipFitUser.setPassword(password);
-                    flipFitUser.setUserID(rs.getInt("user_id"));
-                    flipFitUser.setRoleID(rs.getInt("role"));
-                    flipFitUser.setUserName(rs.getString("user_name"));
+                    flipFitUser.setUserID(rs.getInt("userID"));
+                    flipFitUser.setRoleID(rs.getInt("roleID"));
+                    flipFitUser.setUserName(rs.getString("userName"));
                     return flipFitUser;
                 }
             }
@@ -93,7 +93,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
-            PreparedStatement stmt = con.prepareStatement("INSERT INTO user VALUES (?, ?, ?, ?, ?, ?)");
+            PreparedStatement stmt = con.prepareStatement("INSERT INTO User VALUES (?, ?, ?, ?, ?, ?)");
 
 
             // Generate random integers in range 0 to 999
@@ -122,7 +122,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
-            PreparedStatement stmt = con.prepareStatement("DELETE FROM user WHERE user_id=(?)");
+            PreparedStatement stmt = con.prepareStatement("DELETE FROM User WHERE userID=(?)");
 
             stmt.setInt(1, FFU.getUserID());
 
@@ -142,7 +142,7 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL,DBConstants.USER,DBConstants.PASSWORD);
 
-            PreparedStatement stmt = con.prepareStatement(("UPDATE user SET user_name = ?, role =? , email = ?, phone = ?, password = ? WHERE user_id = ?"));
+            PreparedStatement stmt = con.prepareStatement(("UPDATE User SET userName = ?, roleID =? , emailId = ?, phoneNumber = ?, password = ? WHERE userID = ?"));
 
             stmt.setInt(1,FFU.getUserID());
             stmt.setInt(2, FFU.getUserID());
@@ -169,17 +169,17 @@ public class FlipFitUserDAOImpl implements IFlipFitUserDAO {
             Connection con = DriverManager.getConnection(
                     DBConstants.DB_URL, DBConstants.USER, DBConstants.PASSWORD);
 
-            PreparedStatement stmt = con.prepareStatement("SELECT * FROM user WHERE user_id = ?");
+            PreparedStatement stmt = con.prepareStatement("SELECT * FROM User WHERE userId = ?");
             stmt.setInt(1, userID);
 
             ResultSet rs = stmt.executeQuery();
             rs.next();
-            FFU.setUserName(rs.getString("user_name"));
-            FFU.setUserID(rs.getInt("user_id"));
+            FFU.setUserName(rs.getString("userName"));
+            FFU.setUserID(rs.getInt("userID"));
             FFU.setPassword(rs.getString("password"));
-            FFU.setPhoneNumber(rs.getString("phone"));
-            FFU.setRoleID(rs.getInt("role"));
-            FFU.setEmailID(rs.getString("email"));
+            FFU.setPhoneNumber(rs.getString("phoneNumber"));
+            FFU.setRoleID(rs.getInt("roleID"));
+            FFU.setEmailID(rs.getString("emailId"));
 
             int i = stmt.executeUpdate();
             System.out.println(i + " user fetched");

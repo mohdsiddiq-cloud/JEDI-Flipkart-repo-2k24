@@ -1,8 +1,9 @@
 package com.flipfit.business.interfaces;
 
 import com.flipfit.bean.FlipFitSlots;
+import com.flipfit.exceptions.FlipFitBusinessException;
 
 public interface IFlipFitSlots {
-    public boolean updateAvailability(FlipFitSlots flipFitSlots);
-    public void getSlotDetails();
+    public boolean updateAvailability(FlipFitSlots flipFitSlots) throws FlipFitBusinessException;
+    public void getSlotDetails() throws FlipFitBusinessException;
 }
