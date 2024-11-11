@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="300cb213-d62e-49fa-a65f-e1205c8aaa63" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/JEDI-FLIPKART-GroupA-FLIPFIT.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/JEDI-Flipkart-Group-A-Flipfit-POS.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitAdmin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitBookings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitGym.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitGymOwner.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitNotifications.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitPayment.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitSlots.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/bean/FlipFitUser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitAdminService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitAdminServiceOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitGymOwnerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitGymOwnerServiceOperation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitGymServiceOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitGymServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitUserServiceOperations.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/business/FlipFitUserServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/client/GymFlipFitAdminMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/client/GymFlipFitApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/client/GymFlipFitCustomerMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/client/GymFlipFitGymOwnerMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/constants/SQLConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/constants/StringConstants.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitAdminDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitAdminDAOInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitCustomerDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitCustomerDAOInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitGymOwnerDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/FlipFitGymOwnerDAOInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/UpdatePasswordDAOImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/dao/UpdatePasswordDAOInterface.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/BookingCancellationFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/InvalidAadharCardException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/InvalidGstException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/InvalidPanCardException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/InvalidPhoneNumberException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/ListNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/RegistrationFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/SlotInsertionFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/SlotsUnavailableException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/UserNotFoundException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/VerificationFailedException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/exception/WrongCredentialsException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/utils/DatabaseConnector.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/com/flipfit/utils/StringFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/out/production/Flipfit-JEDI-Java-POS/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/src/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Flipfit-JEDI-Java-POS/src/config.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2ohAIsTRmxyjaFnz5n8chOc7KjB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Flipfit-JEDI-Java-POS" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="300cb213-d62e-49fa-a65f-e1205c8aaa63" name="Changes" comment="" />
+      <created>1731311356750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731311356750</updated>
+    </task>
+    <servers />
+  </component>
+</project>
