@@ -66,9 +66,48 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
 
     @Override
     public boolean bookSlot(int gymId, int time, String email) {
+        int userId = -1;  // Default value if not found
+
         conn = DatabaseConnector.getConnection();
         PreparedStatement preparedStatement = null;
-        String insertQuery = "INSERT INTO Booking ( status, date, time, slotId, gymId,UserEmail  ) VALUES(?,?,?,?,?,?)";
+        ResultSet resultSet2 = null;
+        List<FlipFitGym> flipFitGyms = new ArrayList<FlipFitGym>();
+
+        try {
+            String sqlQuery = "SELECT userId FROM user WHERE email = ?";
+            preparedStatement = conn.prepareStatement(sqlQuery);
+            preparedStatement.setString(1,email);
+            resultSet2 = preparedStatement.executeQuery();
+            if (resultSet2.next()) {
+                userId = resultSet2.getInt("userId");
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        int slotId = -1;  // Default value if not found
+
+        conn = DatabaseConnector.getConnection();
+        PreparedStatement preparedStatement3 = null;
+        ResultSet resultSet3 = null;
+        List<FlipFitGym> flipFitGyms3 = new ArrayList<FlipFitGym>();
+
+        try {
+            String sqlQuery = "SELECT slotsId FROM slots WHERE gymId= ? and startTime= ?";
+            preparedStatement3 = conn.prepareStatement(sqlQuery);
+            preparedStatement3.setInt(1,gymId);
+            preparedStatement3.setInt(2,time);
+            resultSet3 = preparedStatement3.executeQuery();
+            if (resultSet3.next()) {
+                slotId = resultSet3.getInt("slotsId");
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        System.out.println("slot Id"+ slotId);
+
+        conn = DatabaseConnector.getConnection();
+       preparedStatement = null;
+        String insertQuery = "INSERT INTO Booking ( status, date, time, slotId, gymId,userId  ) VALUES(?,?,?,?,?,?)";
 
         try {
             // Check if slots are available
@@ -82,9 +121,9 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
             preparedStatement.setString(1, "CONFIRMED");
             preparedStatement.setInt(2, 11); // Assuming date is fixed for this example
             preparedStatement.setInt(3, time);
-            preparedStatement.setInt(4, 5);
+            preparedStatement.setInt(4,slotId );
             preparedStatement.setInt(5, gymId);
-            preparedStatement.setString(6, email);
+            preparedStatement.setInt(6, userId);
 
             int rowsInserted = preparedStatement.executeUpdate();
 
@@ -96,7 +135,6 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
             } else {
                 throw new SlotsUnavailableException();
             }
-
         } catch (SlotsUnavailableException | SQLException ex) {
             System.out.println(ex.getMessage());
         }
@@ -214,7 +252,7 @@ public class FlipFitCustomerDAOImpl implements FlipFitCustomerDAOInterface {
         PreparedStatement preparedStatement = null;
 
         try {
-            String deleteQuery = "DELETE FROM Booking WHERE userID = ?";
+            String deleteQuery = "DELETE FROM Booking WHERE bookingId = ?";
             preparedStatement = conn.prepareStatement(deleteQuery);
             preparedStatement.setInt(1, bookingId);
 

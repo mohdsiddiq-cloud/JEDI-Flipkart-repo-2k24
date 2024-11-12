@@ -96,6 +96,7 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
 
             int result = preparedStatement.executeUpdate();
 
+
             if (result > 0) {
                 return true;
             } else {
@@ -115,6 +116,7 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
         ResultSet resultSet = null;
         PreparedStatement preparedStatement = null;
         try {
+
             statement = conn.createStatement();
             preparedStatement = conn.prepareStatement(SQLConstants.GYM_USER_VERIFY_PASSWORD, statement.RETURN_GENERATED_KEYS);
             preparedStatement.setString(1, email);
@@ -123,6 +125,9 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
 
             ResultSet result = preparedStatement.executeQuery();
 
+            System.out.println("result ->" + result.next());
+
+
             if (result.next()) {
                 if(result.getString("status").equals("Unverified")){
                     System.out.println("Unverified User, please contact admin to verify");
@@ -130,6 +135,7 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
                 }
                 return true;
             } else {
+
                 return false;
             }
 
@@ -138,4 +144,11 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
         }
         return false;
     }
+
+//    public static void main(String[] args) {
+//        String email="siddiqOwner@gmail.com";
+//        String password="passwordowner";
+//        UpdatePasswordDAOImpl updatePasswordDAO=new UpdatePasswordDAOImpl();
+//        updatePasswordDAO.ver
+//    }
 }

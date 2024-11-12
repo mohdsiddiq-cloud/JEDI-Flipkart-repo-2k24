@@ -118,6 +118,7 @@ public class UpdatePasswordDAOImpl implements UpdatePasswordDAOInterface {
         Statement statement = null;
         ResultSet resultSet = null;
         PreparedStatement preparedStatement = null;
+
         try {
             statement = conn.createStatement();
             preparedStatement = conn.prepareStatement(SQLConstants.GYM_USER_VERIFY_PASSWORD, statement.RETURN_GENERATED_KEYS);

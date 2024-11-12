@@ -128,7 +128,7 @@ public class FlipFitAdminDAOImpl implements FlipFitAdminDAOInterface {
             System.out.println("/n/n/n/n" +  resultSet+ "/n/n/n/n");
 
             while (resultSet.next()) {
-                int id = resultSet.getInt("Id");
+                int id = resultSet.getInt("ownerId");
                 String phoneNo = resultSet.getString("phone_number");
                 String name = resultSet.getString("name");
                 String email = resultSet.getString("email");

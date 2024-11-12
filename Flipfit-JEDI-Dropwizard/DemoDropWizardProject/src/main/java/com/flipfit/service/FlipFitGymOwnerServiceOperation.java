@@ -37,6 +37,8 @@ public class FlipFitGymOwnerServiceOperation implements FlipFitGymOwnerService {
 
     @Override
     public boolean validateLogin(String email, String password) {
+
+        System.out.println("email from function");
         return updatePasswordInterface.verifyGymUserPassword(email, password); // Delegate to DAO to validate login
 //		if(gymOwnerDaoInterface.validateLogin(email,password)) return true;
 //      return false;

@@ -29,7 +29,7 @@ public class SQLConstants {
 
     public static final String ADMIN_VERIFY_GYMS = "UPDATE gyms SET status = ? WHERE gymId = ?";
 
-    public static final String ADMIN_VERIFY_GYMOWNERS = "UPDATE gym_owner SET status = ? WHERE id = ?";
+    public static final String ADMIN_VERIFY_GYMOWNERS = "UPDATE gym_owner SET status = ? WHERE ownerId = ?";
 
 
     public static final String ADMIN_VIEW_UNVERIFIED_GYMS = "SELECT * FROM gyms WHERE status=?";
