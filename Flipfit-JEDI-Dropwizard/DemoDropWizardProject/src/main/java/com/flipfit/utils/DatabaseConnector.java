@@ -10,7 +10,7 @@ public class DatabaseConnector {
     public static Connection getConnection() {
             try {
                 Class.forName("com.mysql.cj.jdbc.Driver");
-                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_db", "root", "P0A@s#s#");
+                Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/flipfit_db", "root", "password");
                 return con;
             }
             catch (Exception e) {

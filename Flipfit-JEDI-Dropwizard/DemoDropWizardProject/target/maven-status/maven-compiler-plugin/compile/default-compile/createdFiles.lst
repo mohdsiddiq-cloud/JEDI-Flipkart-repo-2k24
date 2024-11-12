@@ -19,7 +19,6 @@ com\flipfit\dao\FlipFitCustomerDAOImpl.class
 com\flipfit\dao\UpdatePasswordDAOImpl.class
 com\flipfit\exception\SlotsUnavailableException.class
 com\flipfit\restcontroller\CustomerController.class
-com\flipfit\rest\HelloController.class
 com\flipfit\exception\InvalidPhoneNumberException.class
 com\flipfit\dao\FlipFitAdminDAOInterface.class
 com\flipfit\restcontroller\HelloController.class

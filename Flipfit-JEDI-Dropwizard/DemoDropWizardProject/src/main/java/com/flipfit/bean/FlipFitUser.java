@@ -5,7 +5,6 @@ package com.flipfit.bean;
  */
 public class FlipFitUser {
     private int userId; // Unique identifier for the user
-
     private String userName; // User's name
     private String phoneNumber; // User's phone number
     private String address; // User's address

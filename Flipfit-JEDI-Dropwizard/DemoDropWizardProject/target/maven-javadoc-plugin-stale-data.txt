@@ -29,7 +29,6 @@ com.flipfit.bean
 com.flipfit.constants
 com.flipfit.dao
 com.flipfit.exception
-com.flipfit.rest
 com.flipfit.restcontroller
 com.flipfit.service
 com.flipfit.utils
@@ -119,25 +118,24 @@ C:\Users\S\.m2\repository\org\jboss\logging\jboss-logging\3.3.2.Final\jboss-logg
 C:\Users\S\.m2\repository\org\slf4j\slf4j-api\1.7.36\slf4j-api-1.7.36.jar = 1731316206466
 C:\Users\S\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar = 1731316206603
 C:\Users\S\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar = 1731316206770
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\src\main\java\config.properties = 1731330983240
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\src\main\java = 1731330983174
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\generated-sources\annotations = 1731337948049
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\allclasses-index.html = 1731337970369
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\allpackages-index.html = 1731337970422
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\constant-values.html = 1731337969345
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\element-list = 1731337968931
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\help-doc.html = 1731337970650
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\index-all.html = 1731337970602
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\index.html = 1731337970243
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\jquery-ui.overrides.css = 1731337970725
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\member-search-index.js = 1731337970477
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\module-search-index.js = 1731337970454
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\overview-summary.html = 1731337970629
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\overview-tree.html = 1731337970225
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\package-search-index.js = 1731337970469
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\script.js = 1731337970700
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\search.js = 1731337970704
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\serialized-form.html = 1731337969360
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\stylesheet.css = 1731337970669
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\tag-search-index.js = 1731337970483
-C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\type-search-index.js = 1731337970472
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\src\main\java = 1731395698517
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\generated-sources\annotations = 1731395744478
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\allclasses-index.html = 1731395758925
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\allpackages-index.html = 1731395758929
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\constant-values.html = 1731395758186
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\element-list = 1731395757970
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\help-doc.html = 1731395759199
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\index-all.html = 1731395759157
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\index.html = 1731395758843
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\jquery-ui.overrides.css = 1731395759253
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\member-search-index.js = 1731395759093
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\module-search-index.js = 1731395758930
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\overview-summary.html = 1731395759167
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\overview-tree.html = 1731395758835
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\package-search-index.js = 1731395759009
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\script.js = 1731395759226
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\search.js = 1731395759232
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\serialized-form.html = 1731395758195
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\stylesheet.css = 1731395759199
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\tag-search-index.js = 1731395759098
+C:\Users\S\Desktop\diagrams\Flipfit-JEDI-Dropwizard\DemoDropWizardProject\target\apidocs\type-search-index.js = 1731395759063
